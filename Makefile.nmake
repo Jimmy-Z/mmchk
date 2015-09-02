@@ -1,0 +1,7 @@
+mmchk.exe: main.c mmchk.c mmchk.h ebml.c ebml.h basetype.h stdio_f64.h
+	cl /o mmchk.exe -DWIN32 -DDEBUG main.c mmchk.c ebml.c
+
+all: mmchk.exe
+
+clean:
+	del *.obj;*.exe
